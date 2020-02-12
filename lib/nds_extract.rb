@@ -20,8 +20,7 @@ def directors_totals(nds)
     hash[directors_database][row_index][:name]] = total_gross
     row_index += 1 
   end
-  hash 
-end 
+  hash end 
 
   # counter = 0 
   # while counter < nds.length do 
