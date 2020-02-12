@@ -21,7 +21,6 @@ def directors_totals(nds)
     row_index += 1 
   end
   hash
-end 
 
   # counter = 0 
   # while counter < nds.length do 
