@@ -17,7 +17,7 @@ def directors_totals(nds)
       total_gross += directors_database[row_index][:movies][column_index][:worldwide_gross]
       column_index += 1 
     end
-    hash[directors_database][row_index][:name] = total_gross
+    hash[directors_database[row_index][:name]] = total_gross
     row_index += 1 
   end
   hash
