@@ -8,21 +8,34 @@ def directors_totals(nds)
   #
   # The Hash result be full of things like "Jean-Pierre Jeunet" => "222312123123"
   
-  hash = { directors_name => :worldwide_gross}
+  hash = {}
+  row_index = 0 
+  while row_index < directors_database.length do 
+    column_index = 0 
+    total_gross = 0 
+    while column_index < directors_database[row_index][:movies].length do 
+      total_gross += directors_database[row_index][:movies][column_index][:worldwide_gross]
+      column_index += 1 
+    end
+    hash[directors_database][row_index][:name]] = total_gross
+    row_index += 1 
+  end
+  hash 
+end 
 
-  counter = 0 
-  while counter < nds.length do 
-    movies = nds[counter][:movies]
-    directors_name = nds[counter][:name]
+  # counter = 0 
+  # while counter < nds.length do 
+  #   movies = nds[counter][:movies]
+  #   directors_name = nds[counter][:name]
     
-    counter2 = 0 
-    while counter2 < movies.length do 
-      # binding.pry 
-      worldwide_gross = nds[counter][:movies][0][:worldwide_gross]
-      counter2 += 1 
-    end 
+  #   counter2 = 0 
+  #   while counter2 < movies.length do 
+  #     # binding.pry 
+  #     worldwide_gross = nds[counter][:movies][0][:worldwide_gross]
+  #     counter2 += 1 
+  #   end 
     
-    counter += 1 
-  end 
-  nil
+  #   counter += 1 
+  # end 
+  # nil
 end
